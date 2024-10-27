@@ -38,9 +38,9 @@ export default function RootLayout({
               <Link href="/contact">Contact</Link>
             </NavbarItem>
           </NavbarContent>
-          <NavbarBrand className="text-2xl font-bold text-inherit">
+          <NavbarBrand className="text-2xl font-bold text-inherit justify-start flex">
             {/* <Logo></Logo> */}
-            <Link href="/">Charles Oliver</Link>
+            <Link className = "text-4xl" href="/">Charles Oliver</Link>
           </NavbarBrand>
         </Navbar>
         {children}
