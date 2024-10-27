@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link } from "@nextui-org/react";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -28,6 +29,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar>
+          <NavbarBrand className="text-2xl font-bold text-inherit">
+            {/* <Logo></Logo> */}
+            <Link href="/">Charles Oliver</Link>
+          </NavbarBrand>
+          <NavbarContent className="hidden sm:flex gap-4" justify="center">>
+            <NavbarItem>
+              <Link href="/design">Design</Link>
+            </NavbarItem>
+            <NavbarItem>
+              <Link href="/contact">Contact</Link>
+            </NavbarItem>
+          </NavbarContent>
+        </Navbar>
         {children}
       </body>
     </html>
