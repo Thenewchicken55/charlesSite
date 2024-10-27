@@ -30,11 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar>
-          <NavbarBrand className="text-2xl font-bold text-inherit">
-            {/* <Logo></Logo> */}
-            <Link href="/">Charles Oliver</Link>
-          </NavbarBrand>
-          <NavbarContent className="hidden sm:flex gap-4" justify="center">>
+          <NavbarContent className="hidden sm:flex gap-4" justify="start">
             <NavbarItem>
               <Link href="/design">Design</Link>
             </NavbarItem>
@@ -42,6 +38,10 @@ export default function RootLayout({
               <Link href="/contact">Contact</Link>
             </NavbarItem>
           </NavbarContent>
+          <NavbarBrand className="text-2xl font-bold text-inherit">
+            {/* <Logo></Logo> */}
+            <Link href="/">Charles Oliver</Link>
+          </NavbarBrand>
         </Navbar>
         {children}
       </body>
